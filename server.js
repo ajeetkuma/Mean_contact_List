@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 var db;
 
 // Connect to the database before starting the application server. 
-mongodb.MongoClient.connect('mongodb://localhost:27017/test', function (err, database) {
+mongodb.MongoClient.connect('mongodb://ajajaj:laptopcom@ds133271.mlab.com:33271/test_user_user', function (err, database) {
   if (err) {
     console.log(err);
     process.exit(1);
