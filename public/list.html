@@ -1,0 +1,41 @@
+<div class = "row">
+  <div class="col-md-6">
+    <h2>
+      Contact List
+    </h2>
+  </div>
+  <div class="col-md-3">
+  </div>
+  <div class="col-md-2">
+    <a style="margin-top:20px" class="btn btn-primary" href="#/new/contact"><i class="fa fa-plus-circle" style="margin-right:5px"></i>New Contact</a>
+  </div>
+  <div class="col-md-1">
+  </div>
+</div>
+<div class="container">
+  <table class="table table-hover">
+    <tbody>
+      <tr ng-repeat="contact in contacts | orderBy:'lastName'" style="cursor:pointer">
+        <td>
+          <a ng-href="#/contact/{{contact._id}}">{{ contact.firstName }} {{ contact.lastName }}</a>
+        </td>
+        <td>
+          {{ contact.phone.mobile }}
+        </td>
+        <td>
+          <button type="button" id="contactonephotoDelete" class="button btn btn-danger btn-sm" ng-click="deleteContact(contact._id)" >
+                                                    <i class="fa fa-trash"></i>   Delete
+                                                    </button>
+        </td>
+        <td>
+          <!-- <button type="button" id="" onclick="window.location="'#/contact/{{contact._id}}';" class="button btn btn-danger btn-sm" data-ng-click="toggleEdit()" >
+                                                    <i class="fa fa-pencil"></i>   Edit
+                                                    </button> -->
+          <a  class="btn btn-primary" href="#/contact/{{contact._id}}" data-ng-click="$event.preventDefault();toggleEdit(contact._id)"><i class="fa fa-pencil"></i>   Edit</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <hr/>
+  <div ng-include="contactFormUrl">
+</div>

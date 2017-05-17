@@ -1,0 +1,65 @@
+<div class="row" >
+  <div class="col-md-4" ng-hide="contact._id">
+      <h2>Create new contact</h2>
+  </div>
+  <div class="col-md-4" >
+      
+  </div>
+  <div class="col-md-4" ng-hide="contact._id">
+      <button style="margin-top:20px" class="btn btn-primary" ng-click="back()"><i class="fa fa-backward" style="margin-right:5px"></i>Back</button>
+      <button style="margin-top:20px" class="btn btn-primary" ng-click="saveContact(contact)"><i class="fa fa-send" style="margin-right:5px"></i>Save</button>
+  </div>
+</div>
+<div class="container">
+  <div>
+      <div class="row">
+        <div class="col-sm-4">
+            <label>First Name (required)</label> 
+            <input id="name" class="form-control" type="text" ng-model="contact.firstName" required> 
+        </div>
+        <div class="col-sm-4">
+            <label>Last Name (required)</label> 
+            <input id="name" class="form-control" type="text" ng-model="contact.lastName" required> 
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+           <label>Email (required)</label> 
+           <input id="name" class="form-control" type="text" ng-model="contact.email" required> 
+        </div>
+        <div class="col-sm-4">
+            <label>Phone (Mobile)</label> 
+            <input id="name" class="form-control" type="text" ng-model="contact.phone.mobile"> 
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+            <label>Phone (Work)</label> 
+            <input id="name" class="form-control" type="text" ng-model="contact.phone.work"> 
+        </div>
+        <div class="col-sm-4">
+            <label>Address</label> 
+            <input id="name" class="form-control" type="text" ng-model="contact.address"> 
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-sm-4">
+            <label>Twitter Handle</label> 
+            <input id="name" class="form-control" type="text" ng-model="contact.twitter"> 
+        </div>
+        <div class="col-sm-4" ng-show="contact._id">
+            
+            <button style="margin-top:20px" class="btn btn-primary" ng-click="saveContact(contact)"><i class="fa fa-send" style="margin-right:5px"></i>Save</button> 
+        </div>
+        
+      </div>
+      
+    
+    
+    
+    
+    <p>
+      
+    </p>
+  </div>
+</div>
